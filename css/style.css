@@ -1,0 +1,204 @@
+
+/* ESTILOS GENERALES */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: poppins, sans-serif;
+    color: #1b1b1d;
+}
+
+
+/*-----------------------------*/
+
+
+/* ESTILOS NAVEGADOR */
+
+#header{ /* Contenedor general */
+    width: 100%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+#navbar{ /* Contenedor */
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar h3{ /* Título del navegador */
+    padding: 15px 20px;
+    color: #fff;
+    background-color: #04AA6D;
+    overflow: hidden;
+    display: block;
+}
+
+#navbar ul{ /* Lista navegación */
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navbar li{
+    list-style: none; 
+}
+
+#navbar li a{ /* Links */
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+#navbar li a:hover{ /* Añadimos un hover que al pasar el mouse, se oscurece */
+    background-color: #1b1b1d;
+}
+
+
+/*-----------------------------*/
+
+
+/* ESTILOS PÁGINA */
+
+#main-doc{ /* Contenedor general de la página */
+    padding: 40px 20px 0;
+}
+
+.main-section{ /* Contenedores con todas las sections */
+    padding-bottom: 40px;
+}
+
+.main-section h2{ /* Capturamos todos los subtítulos */
+    padding-bottom: 10px;
+}
+
+.main-section p{ /* Capturamos todos los párrafos y los espaciamos */
+    line-height: 1.8rem;
+}
+
+span{ /* Oscurecemos todos los span para que resalten */
+    font-weight: bold;
+}
+
+.main-section ul{ /* Capturamos todas listas */
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.main-section ul li{ /* Añadimos espacio entre líneas de las listas */
+    line-height: 1.8rem;
+}
+
+.main-section .code{ /* El código lo hacemos más visual y atractivo */
+    background-color: #eee;
+    padding: 15px 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.selectores-tipos{ /* Contenedor de todos los tipos de selectores, dentro del selector Selectores */
+    padding-top: 20px;
+}
+
+.selectores-tipos h3{ /* Capturamos todos los sub-subtítulos de la sección Selectores */
+    font-weight: 600;
+}
+
+/* Selectores Id y Clase les damos los mismos estilos */
+.selectores-tipos .selector,
+.selectores-tipos .elemento{
+    padding-top: 20px;
+}
+
+.selectores-tipos .selector h4,
+.selectores-tipos .elemento h4{
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+.selectores-tipos .selector .code,
+.selectores-tipos .elemento .code{
+    background-color: #eee;
+    padding: 15px 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Selector Elemento, lo diferenciamos con diferente clase para darle otro formato */
+.selectores-tipos .elemento ul{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.selectores-tipos .elemento ul li{
+    line-height: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.selectores-tipos .elemento ul li:last-child{ /* Eliminamos el espacio de abajo del último elemento */
+    margin-bottom: 0;
+}
+
+/* En el caso de las Variables, les aplicamos su propio estilo igual a los demás */
+#variables ul{
+    margin-bottom: 20px;
+}
+
+#variables ul li{
+    margin-bottom: 10px;
+}
+
+#variables div p{
+    line-height: 1.8rem;
+}
+
+#variables .p{ /* Añadimos la clase .p para diferenciar al último párrafo y separarlo del de arriba */
+    margin-top: 15px;
+}
+
+
+/*-----------------------------*/
+
+
+/* RESPONSIVE: Ajustamos el menú de navegación de acuerdo al tamaño de la pantalla */
+
+/* Ordenador pequeño */
+@media(max-width: 1200px) {
+
+    header{ 
+        width: 100%;
+        top: 0;
+    }
+
+    #navbar{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #navbar h3{ /* Título del navegador */
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Tablet y móvil */
+@media(max-width: 800px){
+
+    #navbar ul{ /* Lista navegación */
+        display: block;
+        width: 100%;
+    }
+
+    #navbar li a{
+        text-align: center;
+    }
+}
+

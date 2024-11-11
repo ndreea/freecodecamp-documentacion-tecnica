@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación Técnica CSS</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!--MENÚ DE NAVEGACIÓN-->
+    <header id="header">
+        <nav id="navbar">
+            <h3>Documentación Técnica CSS</h3>
+            <ul>
+                <li><a class="nav-link" href="#introduccion">Introducción</a></li>
+                <li><a class="nav-link" href="#selectores">Selectores</a></li>
+                <li><a class="nav-link" href="#comentarios">Comentarios</a></li>
+                <li><a class="nav-link" href="#variables">Variables</a></li>
+                <li><a class="nav-link" href="#media-queries">Media Queries</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--CONTENEDOR-->
+    <main id="main-doc">
+
+        <!--Introducción-->
+        <section class="main-section" id="introduccion">
+            <header><h2>Introducción</h2></header>
+            <p><span>Hojas de Estilo en Cascada</span> <i>(del inglés <span>Cascading Style Sheets</span>)</i> o CSS es el lenguaje de estilos utilizado para describir la presentación de documentos HTML o XML (incluyendo varios lenguajes basados en XML como SVG, MathML o XHTML). CSS describe cómo debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.</p>
+        </section>
+
+        <!--Selectores-->
+        <section class="main-section" id="selectores">
+            <header><h2>Selectores</h2></header>
+            <p>Un selector es un conjunto de reglas de estilos aplicadas múltiples elementos de la hoja html. En lugar de aplicar el estilo elemento por elemento, lo aplicamos de manera global.</p>
+
+            <!--Tipos de Selectores-->
+            <div class="selectores-tipos">
+                <h3>Principales tipos de Selectores</h3>
+                <!--Selector Id-->
+                <div class="selector">
+                    <h4>Id</h4>
+                    <p>Se define mediante una <i>#</i> justo antes del nombre de la id. Las reglas de estilo que contiene se aplican al elemento que tenga la id indicada.</p>
+                    <div class="code">
+                        <code>#id{ <br>
+                            /* Estilos */ <br>
+                            }
+                        </code>
+                    </div>
+                </div>
+                <!--Selector Clase-->
+                <div class="selector">
+                    <h4>Clase</h4>
+                    <p>Se define mediante un . justo antes del nombre de la clase. Las reglas de estilo que contiene se aplican a cualquier elemento que tenga la clase indicada. Debido a que un elemento puede tener varias clases, también puede recibir estilo de varios selectores de clase.</p>
+                    <div class="code">
+                        <code>.clase{ <br>
+                            /* Estilos */ <br>
+                            }
+                        </code>
+                    </div>
+                </div>
+                <!--Selector Elemento-->
+                <div class="elemento">
+                    <h4>Elemento</h4>
+                    <p>Aplica estilo a todos los elementos que tengan la etiqueta html indicada. Por ejemplo, un selector del elemento div aplicaría estilos a todos los div.</p>
+                    <div class="code">
+                        <code>div{ <br>
+                            /* Estilos */ <br>
+                            }
+                        </code>
+                    </div>
+                    <ul>
+                        <li>En caso de contradicción entre selectores, se aplicarán esta jerarquía de prioridad: <span>!important > inline style > ids > clases > elementos.</span></li>
+                        <li>En caso de igual importancia entre selectores que se contradicen, los últimos en haber sido escritos tendrán prioridad.</li>
+                        <li>La aplicación de estilos inline se penaliza en SEO.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>  
+
+        <!--Comentarios-->
+        <section class="main-section" id="comentarios">
+            <header><h2>Comentarios</h2></header>
+            <div class="code">
+                <code><p><i>/* Contenido del comentario */</i></p></code>    
+            </div>
+        </section>      
+
+        <!--Variables-->
+        <section class="main-section" id="variables">
+            <header><h2>Variables</h2></header>
+            <div>
+                <p><span>Declaración y asignación:</span> --nombrevariable: value;</p>
+                <p><span>Utilización: propiedad:</span> var(--nombrevariable, fallback);</p>
+            </div>
+            <ul>
+                <li>El fallback no es necesario. Se utiliza para que el navegador tenga un respaldo en caso de que la variable sea inválida. Es útil para debuggear.</li>
+                <li>Otra manera de hacer respaldos es poner la misma propiedad justo antes con un valor con más soporte (aprovechando que, en caso de igual importancia, la prioridad va de abajo hacia arriba).</li>
+            </ul>
+            <p>Las variables en CSS también tienen efecto cascada. Por tanto, son utilizables dentro del elemento en el que han sido creadas y de cualquiera de los elementos que estén anidados dentro. Por esto, las variables CSS suelen declararse en la pseudoclase :root (contenedor de todo el documento .html).</p>
+            <p class="p">Las variables se pueden sobreescribir volviéndolas a declarar dentro de elementos más específicos que aquel en el que fueran declaradas por primera vez.</p>
+            </div>
+        </section>
+
+        <!--Media Queries-->
+        <section class="main-section" id="media-queries">
+            <header><h2>Media Queries</h2></header>
+            <p>Permiten cambiar los valores de las reglas de un selector en función del tamaño del viewport. Se utilizan para hacer contenido adaptativo. También pueden alterar el valor de las variables.</p>
+            <div class="code">
+                <code>@media (max-width: 350px) { <br>
+                    :root { <br>
+                        --penguin-size: 200px; <br>
+                        } <br>
+                    p { <br>
+                        color: red; <br>
+                        } <br>
+                    }
+                </code>
+            </div>
+            <p>Esta media querie se activaría si el ancho del viewport es menor o igual a 350 píxeles.</p>
+        </section>
+    </main>
+</body>
+</html>
