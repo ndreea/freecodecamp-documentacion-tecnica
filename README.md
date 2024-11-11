@@ -1,5 +1,5 @@
 # Documentación Técnica CSS 🧩
-Este repositorio contiene información técnica sobre CSS, desarrollado como proyecto final del curso Web Responsive Design de freeCodeCamp. La estructura y el diseño se han realizado utilizando solo HTML y CSS.
+Este repositorio contiene información técnica sobre CSS, desarrollado como proyecto final del curso Responsive Web Design de freeCodeCamp. La estructura y el diseño se han realizado utilizando solo HTML y CSS.
 
 ## Descripción
 La página contiene información sobre el CSS acerca de los Selectores, Variables, Comentarios, y Media Queries. La interfaz se ha diseñado de manera sencilla y minimalista dando protagonismo al texto.
